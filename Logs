@@ -1,0 +1,370 @@
+[ec2-user@ip-172-31-41-145 ~]$ sudo su -
+Last login: Tue Sep 26 04:34:27 UTC 2023 on pts/1
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]# cd $home
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]# pwd
+/root
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                     | 3.6 kB  00:00:00
+amzn2extra-docker                                                                                              | 3.0 kB  00:00:00
+amzn2extra-kernel-5.10                                                                                         | 3.0 kB  00:00:00
+kubernetes                                                                                                     | 1.4 kB  00:00:00
+11 packages excluded due to repository priority protections
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.40.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl-Git = 2.40.1-1.amzn2.0.1 for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core-doc = 2.40.1-1.amzn2.0.1 for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core = 2.40.1-1.amzn2.0.1 for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.40.1-1.amzn2.0.1.x86_64
+--> Running transaction check
+---> Package git-core.x86_64 0:2.40.1-1.amzn2.0.1 will be installed
+---> Package git-core-doc.noarch 0:2.40.1-1.amzn2.0.1 will be installed
+---> Package perl-Git.noarch 0:2.40.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl(Error) for package: perl-Git-2.40.1-1.amzn2.0.1.noarch
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+======================================================================================================================================
+ Package                            Arch                     Version                               Repository                    Size
+======================================================================================================================================
+Installing:
+ git                                x86_64                   2.40.1-1.amzn2.0.1                    amzn2-core                    54 k
+Installing for dependencies:
+ git-core                           x86_64                   2.40.1-1.amzn2.0.1                    amzn2-core                    10 M
+ git-core-doc                       noarch                   2.40.1-1.amzn2.0.1                    amzn2-core                   3.0 M
+ perl-Error                         noarch                   1:0.17020-2.amzn2                     amzn2-core                    32 k
+ perl-Git                           noarch                   2.40.1-1.amzn2.0.1                    amzn2-core                    41 k
+ perl-TermReadKey                   x86_64                   2.30-20.amzn2.0.2                     amzn2-core                    31 k
+
+Transaction Summary
+======================================================================================================================================
+Install  1 Package (+5 Dependent packages)
+
+Total download size: 13 M
+Installed size: 44 M
+Downloading packages:
+(1/6): git-2.40.1-1.amzn2.0.1.x86_64.rpm                                                                       |  54 kB  00:00:00
+(2/6): git-core-doc-2.40.1-1.amzn2.0.1.noarch.rpm                                                              | 3.0 MB  00:00:00
+(3/6): git-core-2.40.1-1.amzn2.0.1.x86_64.rpm                                                                  |  10 MB  00:00:00
+(4/6): perl-Error-0.17020-2.amzn2.noarch.rpm                                                                   |  32 kB  00:00:00
+(5/6): perl-Git-2.40.1-1.amzn2.0.1.noarch.rpm                                                                  |  41 kB  00:00:00
+(6/6): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm                                                           |  31 kB  00:00:00
+--------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                  38 MB/s |  13 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : git-core-2.40.1-1.amzn2.0.1.x86_64                                                                                 1/6
+  Installing : git-core-doc-2.40.1-1.amzn2.0.1.noarch                                                                             2/6
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                3/6
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                                          4/6
+  Installing : perl-Git-2.40.1-1.amzn2.0.1.noarch                                                                                 5/6
+  Installing : git-2.40.1-1.amzn2.0.1.x86_64                                                                                      6/6
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                                          1/6
+  Verifying  : git-core-2.40.1-1.amzn2.0.1.x86_64                                                                                 2/6
+  Verifying  : git-core-doc-2.40.1-1.amzn2.0.1.noarch                                                                             3/6
+  Verifying  : perl-Git-2.40.1-1.amzn2.0.1.noarch                                                                                 4/6
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                5/6
+  Verifying  : git-2.40.1-1.amzn2.0.1.x86_64                                                                                      6/6
+
+Installed:
+  git.x86_64 0:2.40.1-1.amzn2.0.1
+
+Dependency Installed:
+  git-core.x86_64 0:2.40.1-1.amzn2.0.1      git-core-doc.noarch 0:2.40.1-1.amzn2.0.1         perl-Error.noarch 1:0.17020-2.amzn2
+  perl-Git.noarch 0:2.40.1-1.amzn2.0.1      perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2
+
+Complete!
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]# git clone  https://github.com/ashishrpandey/example-voting-app
+Cloning into 'example-voting-app'...
+remote: Enumerating objects: 494, done.
+remote: Total 494 (delta 0), reused 0 (delta 0), pack-reused 494
+Receiving objects: 100% (494/494), 236.19 KiB | 12.43 MiB/s, done.
+Resolving deltas: 100% (179/179), done.
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]# /root/example-voting-app
+-bash: /root/example-voting-app: Is a directory
+[root@ip-172-31-41-145 ~]# cd /root/example-voting-app
+[root@ip-172-31-41-145 example-voting-app]#
+[root@ip-172-31-41-145 example-voting-app]#
+[root@ip-172-31-41-145 example-voting-app]# pwd
+/root/example-voting-app
+[root@ip-172-31-41-145 example-voting-app]#
+[root@ip-172-31-41-145 example-voting-app]#
+[root@ip-172-31-41-145 example-voting-app]# cd /root/example-voting-app/k8s-specifications
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# pwd
+/root/example-voting-app/k8s-specifications
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# ls -lrt
+total 36
+-rw-r--r-- 1 root root 292 Sep 28 03:14 worker-deployment.yaml
+-rw-r--r-- 1 root root 192 Sep 28 03:14 vote-service.yaml
+-rw-r--r-- 1 root root 289 Sep 28 03:14 vote-deployment.yaml
+-rw-r--r-- 1 root root 195 Sep 28 03:14 result-service.yaml
+-rw-r--r-- 1 root root 299 Sep 28 03:14 result-deployment.yaml
+-rw-r--r-- 1 root root 152 Sep 28 03:14 redis-service.yaml
+-rw-r--r-- 1 root root 402 Sep 28 03:14 redis-deployment.yaml
+-rw-r--r-- 1 root root 146 Sep 28 03:14 db-service.yaml
+-rw-r--r-- 1 root root 401 Sep 28 03:14 db-deployment.yaml
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# cd /root/example-voting-app
+[root@ip-172-31-41-145 example-voting-app]# ls -lrt
+total 96
+drwxr-xr-x 5 root root   133 Sep 28 03:14 result
+-rw-r--r-- 1 root root  2182 Sep 28 03:14 README.md
+-rw-r--r-- 1 root root   185 Sep 28 03:14 MAINTAINERS
+-rw-r--r-- 1 root root 10758 Sep 28 03:14 LICENSE
+drwxr-xr-x 2 root root   250 Sep 28 03:14 k8s-specifications
+-rw-r--r-- 1 root root  1692 Sep 28 03:14 docker-stack.yml
+-rw-r--r-- 1 root root   808 Sep 28 03:14 docker-compose.yml
+-rw-r--r-- 1 root root   400 Sep 28 03:14 docker-compose-simple.yml
+-rw-r--r-- 1 root root   808 Sep 28 03:14 docker-compose-javaworker.yml
+-rw-r--r-- 1 root root   609 Sep 28 03:14 dockercloud.yml
+-rw-r--r-- 1 root root 54824 Sep 28 03:14 architecture.png
+drwxr-xr-x 3 root root    70 Sep 28 03:14 worker
+drwxr-xr-x 4 root root    93 Sep 28 03:14 vote
+[root@ip-172-31-41-145 example-voting-app]#
+[root@ip-172-31-41-145 example-voting-app]#
+[root@ip-172-31-41-145 example-voting-app]# cd /root/example-voting-app/k8s-specifications
+[root@ip-172-31-41-145 k8s-specifications]# ls
+db-deployment.yaml  redis-deployment.yaml  result-deployment.yaml  vote-deployment.yaml  worker-deployment.yaml
+db-service.yaml     redis-service.yaml     result-service.yaml     vote-service.yaml
+[root@ip-172-31-41-145 k8s-specifications]# ls -lrt
+total 36
+-rw-r--r-- 1 root root 292 Sep 28 03:14 worker-deployment.yaml
+-rw-r--r-- 1 root root 192 Sep 28 03:14 vote-service.yaml
+-rw-r--r-- 1 root root 289 Sep 28 03:14 vote-deployment.yaml
+-rw-r--r-- 1 root root 195 Sep 28 03:14 result-service.yaml
+-rw-r--r-- 1 root root 299 Sep 28 03:14 result-deployment.yaml
+-rw-r--r-- 1 root root 152 Sep 28 03:14 redis-service.yaml
+-rw-r--r-- 1 root root 402 Sep 28 03:14 redis-deployment.yaml
+-rw-r--r-- 1 root root 146 Sep 28 03:14 db-service.yaml
+-rw-r--r-- 1 root root 401 Sep 28 03:14 db-deployment.yaml
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# cd  /root/example-voting-app/vote
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# ls
+app.py  Dockerfile  requirements.txt  static  templates
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# vi app.py
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# cd  root/example-voting-app/worker/src/Worker
+-bash: cd: root/example-voting-app/worker/src/Worker: No such file or directory
+[root@ip-172-31-41-145 vote]# cd /root/example-voting-app/worker/src/Worker
+[root@ip-172-31-41-145 Worker]#
+[root@ip-172-31-41-145 Worker]# ls -lrt
+total 12
+-rw-r--r-- 1 root root  654 Sep 28 03:14 Worker.csproj
+-rw-r--r-- 1 root root 5521 Sep 28 03:14 Program.cs
+[root@ip-172-31-41-145 Worker]# vi Program.cs
+[root@ip-172-31-41-145 Worker]#
+[root@ip-172-31-41-145 Worker]#
+[root@ip-172-31-41-145 Worker]# cd /root/example-voting-app/k8s-specifications
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# ls -lrt
+total 36
+-rw-r--r-- 1 root root 292 Sep 28 03:14 worker-deployment.yaml
+-rw-r--r-- 1 root root 192 Sep 28 03:14 vote-service.yaml
+-rw-r--r-- 1 root root 289 Sep 28 03:14 vote-deployment.yaml
+-rw-r--r-- 1 root root 195 Sep 28 03:14 result-service.yaml
+-rw-r--r-- 1 root root 299 Sep 28 03:14 result-deployment.yaml
+-rw-r--r-- 1 root root 152 Sep 28 03:14 redis-service.yaml
+-rw-r--r-- 1 root root 402 Sep 28 03:14 redis-deployment.yaml
+-rw-r--r-- 1 root root 146 Sep 28 03:14 db-service.yaml
+-rw-r--r-- 1 root root 401 Sep 28 03:14 db-deployment.yaml
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# cd  /root/example-voting-app/vote
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# ls -lrt
+total 12
+drwxr-xr-x 2 root root   24 Sep 28 03:14 templates
+drwxr-xr-x 3 root root   25 Sep 28 03:14 static
+-rw-r--r-- 1 root root   21 Sep 28 03:14 requirements.txt
+-rw-r--r-- 1 root root  557 Sep 28 03:14 Dockerfile
+-rw-r--r-- 1 root root 1123 Sep 28 03:14 app.py
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# vi app.py
+[root@ip-172-31-41-145 vote]# vi app.py
+[root@ip-172-31-41-145 vote]# k get svc
+-bash: k: command not found
+[root@ip-172-31-41-145 vote]# alias k=kubectl
+[root@ip-172-31-41-145 vote]# k get svc
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+db           ClusterIP   10.107.117.206   <none>        5432/TCP         18h
+kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP          2d20h
+redis        ClusterIP   10.103.162.201   <none>        6379/TCP         18h
+result       NodePort    10.101.78.31     <none>        5001:31001/TCP   18h
+vote         NodePort    10.105.126.193   <none>        5000:31000/TCP   18h
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# kubectl apply -f .
+error: error reading [.]: recognized file extensions are [.json .yaml .yml]
+[root@ip-172-31-41-145 vote]# cd /root/example-voting-app/k8s-specifications
+[root@ip-172-31-41-145 k8s-specifications]# ls -lrt
+total 36
+-rw-r--r-- 1 root root 292 Sep 28 03:14 worker-deployment.yaml
+-rw-r--r-- 1 root root 192 Sep 28 03:14 vote-service.yaml
+-rw-r--r-- 1 root root 289 Sep 28 03:14 vote-deployment.yaml
+-rw-r--r-- 1 root root 195 Sep 28 03:14 result-service.yaml
+-rw-r--r-- 1 root root 299 Sep 28 03:14 result-deployment.yaml
+-rw-r--r-- 1 root root 152 Sep 28 03:14 redis-service.yaml
+-rw-r--r-- 1 root root 402 Sep 28 03:14 redis-deployment.yaml
+-rw-r--r-- 1 root root 146 Sep 28 03:14 db-service.yaml
+-rw-r--r-- 1 root root 401 Sep 28 03:14 db-deployment.yaml
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# kubectl apply -f .
+deployment.apps/db unchanged
+service/db unchanged
+deployment.apps/redis unchanged
+service/redis unchanged
+deployment.apps/result unchanged
+service/result unchanged
+deployment.apps/vote unchanged
+service/vote unchanged
+deployment.apps/worker unchanged
+[root@ip-172-31-41-145 k8s-specifications]#  kubectl get all
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/db-b54cd94f4-8m84f        1/1     Running   0          18h
+pod/redis-868d64d78-2gjsm     1/1     Running   0          18h
+pod/result-5d57b59f4b-ljgdd   1/1     Running   0          18h
+pod/vote-94849dc97-gc9w6      1/1     Running   0          18h
+pod/worker-dd46d7584-qp2x2    1/1     Running   0          18h
+
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+service/db           ClusterIP   10.107.117.206   <none>        5432/TCP         18h
+service/kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP          2d20h
+service/redis        ClusterIP   10.103.162.201   <none>        6379/TCP         18h
+service/result       NodePort    10.101.78.31     <none>        5001:31001/TCP   18h
+service/vote         NodePort    10.105.126.193   <none>        5000:31000/TCP   18h
+
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/db       1/1     1            1           18h
+deployment.apps/redis    1/1     1            1           18h
+deployment.apps/result   1/1     1            1           18h
+deployment.apps/vote     1/1     1            1           18h
+deployment.apps/worker   1/1     1            1           18h
+
+NAME                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/db-b54cd94f4        1         1         1       18h
+replicaset.apps/redis-868d64d78     1         1         1       18h
+replicaset.apps/result-5d57b59f4b   1         1         1       18h
+replicaset.apps/vote-94849dc97      1         1         1       18h
+replicaset.apps/worker-dd46d7584    1         1         1       18h
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# k get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-8m84f        1/1     Running   0          18h
+redis-868d64d78-2gjsm     1/1     Running   0          18h
+result-5d57b59f4b-ljgdd   1/1     Running   0          18h
+vote-94849dc97-gc9w6      1/1     Running   0          18h
+worker-dd46d7584-qp2x2    1/1     Running   0          18h
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# cd $home
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]#
+[root@ip-172-31-41-145 ~]# git clone https://github.com/ashishrpandey/example-voting-app
+fatal: destination path 'example-voting-app' already exists and is not an empty directory.
+[root@ip-172-31-41-145 ~]# cd  /root/example-voting-app/k8s-specifications
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]#
+[root@ip-172-31-41-145 k8s-specifications]# kubectl apply -f .
+deployment.apps/db unchanged
+service/db unchanged
+deployment.apps/redis unchanged
+service/redis unchanged
+deployment.apps/result unchanged
+service/result unchanged
+deployment.apps/vote unchanged
+service/vote unchanged
+deployment.apps/worker unchanged
+[root@ip-172-31-41-145 k8s-specifications]# cd /root/example-voting-app/vote
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# ls -lrt
+total 12
+drwxr-xr-x 2 root root   24 Sep 28 03:14 templates
+drwxr-xr-x 3 root root   25 Sep 28 03:14 static
+-rw-r--r-- 1 root root   21 Sep 28 03:14 requirements.txt
+-rw-r--r-- 1 root root  557 Sep 28 03:14 Dockerfile
+-rw-r--r-- 1 root root 1123 Sep 28 03:14 app.py
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# k get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-8m84f        1/1     Running   0          18h
+redis-868d64d78-2gjsm     1/1     Running   0          18h
+result-5d57b59f4b-ljgdd   1/1     Running   0          18h
+vote-94849dc97-gc9w6      1/1     Running   0          18h
+worker-dd46d7584-qp2x2    1/1     Running   0          18h
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]# k delete pod vote-94849dc97-gc9w6
+pod "vote-94849dc97-gc9w6" deleted
+[root@ip-172-31-41-145 vote]# k get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-8m84f        1/1     Running   0          18h
+redis-868d64d78-2gjsm     1/1     Running   0          18h
+result-5d57b59f4b-ljgdd   1/1     Running   0          18h
+vote-94849dc97-pq7g4      1/1     Running   0          20s
+worker-dd46d7584-qp2x2    1/1     Running   0          18h
+[root@ip-172-31-41-145 vote]# k delete worker-dd46d7584-qp2x2
+error: the server doesn't have a resource type "worker-dd46d7584-qp2x2"
+[root@ip-172-31-41-145 vote]# k delete worker-dd46d7584-qp2x2
+error: the server doesn't have a resource type "worker-dd46d7584-qp2x2"
+[root@ip-172-31-41-145 vote]# k get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-8m84f        1/1     Running   0          18h
+redis-868d64d78-2gjsm     1/1     Running   0          18h
+result-5d57b59f4b-ljgdd   1/1     Running   0          18h
+vote-94849dc97-pq7g4      1/1     Running   0          73s
+worker-dd46d7584-qp2x2    1/1     Running   0          18h
+[root@ip-172-31-41-145 vote]# k delete worker-dd46d7584-qp2x2
+error: the server doesn't have a resource type "worker-dd46d7584-qp2x2"
+[root@ip-172-31-41-145 vote]# k delete worker-dd46d7584-qp2x2
+error: the server doesn't have a resource type "worker-dd46d7584-qp2x2"
+[root@ip-172-31-41-145 vote]# k get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-8m84f        1/1     Running   0          18h
+redis-868d64d78-2gjsm     1/1     Running   0          18h
+result-5d57b59f4b-ljgdd   1/1     Running   0          18h
+vote-94849dc97-pq7g4      1/1     Running   0          3m5s
+worker-dd46d7584-qp2x2    1/1     Running   0          18h
+[root@ip-172-31-41-145 vote]# k delete db-b54cd94f4-8m84f
+error: the server doesn't have a resource type "db-b54cd94f4-8m84f"
+[root@ip-172-31-41-145 vote]#
+[root@ip-172-31-41-145 vote]#
